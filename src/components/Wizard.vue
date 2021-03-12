@@ -21,7 +21,7 @@
                 {{ $t('wizard.success') }}
             </a>
         </ul>
-        <Alert v-if="error || msg" type="danger" :msg="msg"/>
+        <!-- <Alert v-if="error || msg" type="danger" :msg="msg"/> -->
     </div>
 </template>
 
@@ -168,7 +168,7 @@ export default {
                         const status = await this.ws(res.data.refs.websocket_status)
                         const result = await axios.get(`${this.endpoint}/payload/${status.payload_uuidv4}`, headers)
 
-                        // if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
+                        if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
 
                         this.account = result.data.response.account
 
@@ -212,7 +212,7 @@ export default {
                         this.openSignRequest(res.data.uuid)
                         const status = await this.ws(res.data.refs.websocket_status)
                         const result = await axios.get(`${this.endpoint}/payload/${status.payload_uuidv4}`, headers)
-                        // if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
+                        if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
                         if (this.account === result.data.response.account) throw new Error(this.$t('wizard.error.equalAccounts'))
                         this.RegularKey = result.data.response.account
                     } catch(e) {
