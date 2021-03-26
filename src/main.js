@@ -29,13 +29,10 @@ app.component('fa', FontAwesomeIcon)
 
 const urlParams = new URLSearchParams(window.location.search)
 const token = urlParams.get('xAppToken')
-// const mode = urlParams.get('xAppMode')
 
-import './assets/css/bootstrap-4.5.3.min.css'
-import './assets/css/xapps-dist.css'
 import './assets/css/xapps-routed-dist.css'
 
 app.config.globalProperties.token = token
-app.config.globalProperties.endpoint = 'https://xappsbackendforxumm.loca.lt'
+app.config.globalProperties.endpoint = process.env.VUE_APP_API_ENDPOINT
 
 app.mount('#app')

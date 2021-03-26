@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+      const theme = ((new URLSearchParams(document.location.href)).get('xAppStyle') || 'dark').toLowerCase()
+      var link = document.createElement('link')
+      link.href = 'https://xumm.app/assets/themes/xapp/xumm-' + theme + '/bootstrap.min.css'
+      link.type = 'text/css'
+      link.rel = 'stylesheet'
+      document.getElementsByTagName('head')[0].appendChild(link)
+    </script>
   </head>
   <body>
     <noscript>

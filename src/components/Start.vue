@@ -22,7 +22,7 @@
             <a v-else-if="busy" class="shadow btn btn-lg btn-primary btn-block disabled" >
                 <Spinner />
             </a>
-            <a v-else-if="error" class="shadow btn btn-lg btn-primary btn-block" @click="getTokenData()">
+            <a v-else-if="error" class="shadow text-white btn btn-lg btn-primary btn-block" @click="getTokenData()">
                 {{ $t("start.try_again") }}
                 <fa :icon="['fas', 'arrow-right']"/>
             </a>
