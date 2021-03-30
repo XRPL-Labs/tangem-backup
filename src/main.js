@@ -28,7 +28,7 @@ app.use(i18n)
 app.component('fa', FontAwesomeIcon)
 
 const urlParams = new URLSearchParams(window.location.search)
-const token = urlParams.get('xAppToken')
+const token = urlParams.get('xAppToken') || process.env?.VUE_APP_NAME
 
 import './assets/css/xapps-routed-dist.css'
 
