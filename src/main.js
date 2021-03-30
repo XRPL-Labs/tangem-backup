@@ -33,6 +33,6 @@ const token = urlParams.get('xAppToken') || process.env?.VUE_APP_NAME
 import './assets/css/xapps-routed-dist.css'
 
 app.config.globalProperties.token = token
-app.config.globalProperties.endpoint = process.env.VUE_APP_API_ENDPOINT
+app.config.globalProperties.endpoint = process.env?.VUE_APP_API_ENDPOINT || ''
 
 app.mount('#app')
