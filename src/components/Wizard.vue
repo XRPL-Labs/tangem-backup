@@ -151,7 +151,7 @@ export default {
             this.busy = true
             this.error = false
 
-            const headers = { headers: { Authorization: this.state.token } }
+            const headers = { headers: { Authorization: this.state.token, 'x-api-key': this.apikey } }
 
             switch(this.activeIndex) {
                 case 0:

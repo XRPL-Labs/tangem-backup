@@ -34,5 +34,6 @@ import './assets/css/xapps-routed-dist.css'
 
 app.config.globalProperties.token = token
 app.config.globalProperties.endpoint = process.env?.VUE_APP_API_ENDPOINT || ''
+app.config.globalProperties.apikey = process.env?.VUE_APP_XAPP_KEY || ''
 
 app.mount('#app')
