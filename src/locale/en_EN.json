@@ -1,42 +1,42 @@
 {
     "start": {
         "title": "Tangem Backup",
-        "subtitle": "Backup your tangem card",
-        "description": "This xApp will help to make a backup of your tangem card, it sets a regular key on your xrp account that is used by your main tangem card. After completion you can sign transactions with both cards",
+        "subtitle": "Configure a back up Tangem card",
+        "description": "This xApp will help you to setup a second Tangem account as backup card. It sets a RegularKey (on ledger) on your primary account (main Tangem card). After completion you can sign transactions for your primary account (main Tangem card) with both cards.",
         "list_header": "To continue you need:",
-        "list_item_1": "Main Tangem Card",
-        "list_item_2": "Tangem Card that you will use for your backup",
+        "list_item_1": "Tangem card to back up",
+        "list_item_2": "Tangem card that you will use as your backup card",
         "button": "I'm ready, continue",
         "try_again": "Try again",
-        "error": "error getting token data"
+        "error": "Error fetching environment data"
     },
     "wizard": {
         "step_1": {
             "header": "Step 1",
-            "body": "This step will let you pick your XRP account on your main Tangem card, that will be BackedUp.",
-            "button": "Select Account"
+            "body": "This step will let you select your primary (Tangem card) XRPL account. This is the account a back up card will be set on.",
+            "button": "Select pimary card"
         },
         "step_2": {
             "header": "Step 2",
-            "body": "Sign with the the BackUp account.",
-            "button": "BackUp"
+            "body": "Sign with the the Back Up account (Tangem card)",
+            "button": "Confirm back up card"
         },
         "step_3": {
             "header": "Step 3",
             "body": "Sign the account set transaction",
-            "button": "Next Step"
+            "button": "Next step (finish)"
         },
-        "success": "Your XRP account has a backup (regular key)",
+        "success": "Card configured as back up card",
         "error": {
-            "reactNative": "this webpage is not supported",
+            "reactNative": "This WebPage is not supported",
             "failed": "Failed to fetch",
-            "closed": "websocket closed",
-            "websocket": "A problem with the websocket connection",
-            "403": "Access denied 403",
-            "hasRegularKey": "This account already has an regular key",
-            "equalAccounts": "The accounts you selected are the same",
-            "notTangem": "The account you selected is not a Tangem card, please try again",
-            "dissabledMasterkey": "Master key is dissabled on your Tangem card",
+            "closed": "WebSocket closed",
+            "websocket": "Problem with the WebSocket connection",
+            "403": "Access denied (403)",
+            "hasRegularKey": "This account already has a RegularKey (back up account) set",
+            "equalAccounts": "You selected the same XRPL account (card) as source and destination",
+            "notTangem": "The account you selected does not belong to a Tangem card, please try again",
+            "dissabledMasterkey": "Master Key is disabled on your Tangem card: you cannot use this wizard",
 
             "invalidParams": "One or more fields are specified incorrectly, or one or more required fields are missing.",
             "lgrNotFound": "The ledger specified by the ledger_hash or ledger_index does not exist, or it does exist but the server does not have it.",
