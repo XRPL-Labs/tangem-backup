@@ -27,7 +27,9 @@
                 <fa :icon="['fas', 'arrow-right']"/>
             </a>
         </div>
-        <Alert v-if="error" type="danger" :msg="error"/>
+        <div style="margin-top: 10px">
+            <Alert v-if="error" type="danger" :msg="error"/>
+        </div>
     </div>
 </template>
 
@@ -50,7 +52,6 @@ export default {
         }
     },
     async mounted() {
-        // Todo If token not avaiable try again with method
         await this.getTokenData()
     },
     methods: {
