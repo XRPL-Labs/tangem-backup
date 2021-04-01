@@ -142,7 +142,7 @@ export default {
             console.log(e)
             this.$swal({
                 icon: 'error',
-                title: 'Oops...',
+                title: this.$t('wizard.error.title'),
                 text: e
             })
         },
@@ -183,16 +183,16 @@ export default {
                             } else {
                                 this.msg = 'Masterkey enabled and already a Regular key: ' + account_info_response.result.account_data.RegularKey
                                 const callback = await this.$swal({
-                                    title: 'Regular key already set',
-                                    text: 'Do you want to change the backup account?',
+                                    title: this.$t('wizard.error.hasRegularKeyTitle'),
+                                    text: this.$t('wizard.error.changeRegularKey'),
                                     icon: 'warning',
                                     showCancelButton: true,
                                     // confirmButtonColor: '#3085d6',
                                     cancelButtonColor: '#d33',
-                                    confirmButtonText: 'Oops take me back',
-                                    cancelButtonText: 'Continue to replace my backup account'
+                                    confirmButtonText: this.$t('wizard.error.cancelAction'),
+                                    cancelButtonText: this.$t('wizard.error.confirmChangeRegularKey')
                                 })
-                                if (callback.isConfirmed) throw 'Please close this xApp'
+                                if (callback.isConfirmed) throw this.$t('wizard.error.confirmCloseApp')
                             }
                         }
 

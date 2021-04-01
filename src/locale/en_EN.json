@@ -1,6 +1,5 @@
 {
     "start": {
-        "title": "Tangem Backup",
         "subtitle": "Configure a back up Tangem card",
         "description": "This xApp will help you to setup a second Tangem account as backup card. It sets a RegularKey (on ledger) on your primary account (main Tangem card). After completion you can sign transactions for your primary account (main Tangem card) with both cards.",
         "list_header": "To continue you need:",
@@ -28,6 +27,7 @@
         },
         "success": "Card configured as back up card",
         "error": {
+            "title": "Oops",
             "reactNative": "This WebPage is not supported",
             "failed": "Failed to fetch",
             "closed": "WebSocket closed",
@@ -37,6 +37,12 @@
             "equalAccounts": "You selected the same XRPL account (card) as source and destination",
             "notTangem": "The account you selected does not belong to a Tangem card, please try again",
             "dissabledMasterkey": "Master Key is disabled on your Tangem card: you cannot use this wizard",
+
+            "hasRegularKeyTitle": "Regular key already set",
+            "changeRegularKey": "Do you want to change the backup account?",
+            "cancelAction": "Oops take me back",
+            "confirmChangeRegularKey": "Continue to replace my backup account",
+            "confirmCloseApp": "Please close this xApp",
 
             "invalidParams": "One or more fields are specified incorrectly, or one or more required fields are missing.",
             "lgrNotFound": "The ledger specified by the ledger_hash or ledger_index does not exist, or it does exist but the server does not have it.",
