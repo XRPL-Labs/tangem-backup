@@ -32,7 +32,6 @@ export default {
     },
     computed: {
         currentComponent() {
-            // Todo 404?
             return routes[this.currentRoute] || Start
         }
     },
