@@ -39,7 +39,6 @@ export default {
         window.addEventListener('popstate', (event) => {
             this.currentRoute = window.location.pathname
             this.state = event.state
-            console.log("location: " + document.location + ", state: " + JSON.stringify(event.state))
         })
     }
 }
