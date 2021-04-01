@@ -138,6 +138,7 @@ export default {
             this.error = true
             if (e === '') return
             if (e.status === 403) e = this.$t('wizard.error.403')
+            if (e.status === 404) e = this.$t('wizard.error.404')
             this.msg = e
             console.log(e)
             this.$swal({

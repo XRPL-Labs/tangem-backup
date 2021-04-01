@@ -33,6 +33,7 @@
             "closed": "WebSocket closed",
             "websocket": "Problem with the WebSocket connection",
             "403": "Access denied (403)",
+            "404": "Server not found (404)",
             "hasRegularKey": "This account already has a RegularKey (back up account) set",
             "equalAccounts": "You selected the same XRPL account (card) as source and destination",
             "notTangem": "The account you selected does not belong to a Tangem card, please try again",
