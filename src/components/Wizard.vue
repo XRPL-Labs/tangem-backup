@@ -193,7 +193,6 @@ export default {
                                     confirmButtonText: this.$t('wizard.error.cancelAction'),
                                     cancelButtonText: this.$t('wizard.error.confirmChangeRegularKey')
                                 })
-                                if (callback.isConfirmed) throw this.$t('wizard.error.confirmCloseApp')
                             }
                         }
 
