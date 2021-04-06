@@ -23,12 +23,33 @@ const i18n = createI18n({
     messages
 })
 
-app.use(VueSweetalert2)
 app.use(i18n)
 app.component('fa', FontAwesomeIcon)
 
 const urlParams = new URLSearchParams(window.location.search)
 const token = urlParams.get('xAppToken') || process.env?.VUE_APP_NAME
+const theme = urlParams.get('xAppStyle') || 'LIGHT'
+
+const options = {
+    DARK: {
+        backdrop: 'rgba(0,0,0,.4)',
+        background: '#000'
+    },
+    MOONLIGHT: {
+        backdrop: 'rgba(0,0,0,.4)',
+        background: '#181A21'
+    },
+    ROYAL: {
+        backdrop: 'rgba(0,0,0,.4)',
+        background: '#030B36'
+    },
+    LIGHT: {
+        backdrop: 'rgba(255,255,255,.4)',
+        background: '#fff'
+    }
+}
+
+app.use(VueSweetalert2, options[theme])
 
 import './assets/css/xapps-routed-dist.css'
 
