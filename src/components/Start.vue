@@ -15,11 +15,11 @@
             </ol>
         </div>
         <div class="mt-4 text-center">
-            <a v-if="ready" @click.prevent="next()" class="shadow btn btn-lg btn-primary btn-block" >
+            <a v-if="ready" @click.prevent="next()" class="shadow text-white btn btn-lg btn-primary btn-block" >
                 {{ $t("start.button") }}
                 <fa :icon="['fas', 'arrow-right']"/>
             </a>
-            <a v-else-if="busy" class="shadow btn btn-lg btn-primary btn-block disabled" >
+            <a v-else-if="busy" class="shadow text-white btn btn-lg btn-primary btn-block disabled" >
                 <Spinner />
             </a>
             <a v-else-if="error" class="shadow text-white btn btn-lg btn-primary btn-block" @click="getTokenData()">
