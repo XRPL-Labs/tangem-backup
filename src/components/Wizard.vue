@@ -70,28 +70,21 @@ export default {
                 uuid: uuid
             }))
         },
-        ws(url) {
+        isResolved() {
             return new Promise((resolve, reject) => {
-                const socket = new WebSocket(url)
-                socket.onmessage = msg => {
-                    const data = JSON.parse(msg.data)
-                    if (data.signed) {
-                        // if the user signs the request
-                        resolve(data)
-                        socket.close()
-                    } else if(data.signed === false) {
-                        // If the user closes the sign request
-                        reject('')
-                        socket.close()
-                    }
+                function message(event) {
+                    window.removeEventListener("message", message)
+                    document.removeEventListener("message", message)
+
+                    const data = JSON.parse(event.data)
+                    if(data.method !== 'payloadResolved') return reject('')
+                    if(data.reason === 'SIGNED') return resolve()
+                    else return reject('')
                 }
-                socket.onclose = msg => {
-                    reject(this.$t('wizard.error.closed'))
-                }
-                socket.onerror = e => {
-                    reject(this.$t('wizard.error.websocket'))
-                    socket.close()
-                }
+                //iOS
+                window.addEventListener('message', message)
+                //Android
+                document.addEventListener('message', message)
             })
         },
         getWebSocketUrl(nodetype) {
@@ -166,8 +159,8 @@ export default {
 
                         const res = await axios.post(`${this.endpoint}/payload`, payload, headers)
                         this.openSignRequest(res.data.uuid)
-                        const status = await this.ws(res.data.refs.websocket_status)
-                        const result = await axios.get(`${this.endpoint}/payload/${status.payload_uuidv4}`, headers)
+                        await this.isResolved()
+                        const result = await axios.get(`${this.endpoint}/payload/${res.data.uuid}`, headers)
 
                         if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
 
@@ -211,8 +204,8 @@ export default {
                         }
                         const res = await axios.post(`${this.endpoint}/payload`, payload, headers)
                         this.openSignRequest(res.data.uuid)
-                        const status = await this.ws(res.data.refs.websocket_status)
-                        const result = await axios.get(`${this.endpoint}/payload/${status.payload_uuidv4}`, headers)
+                        await this.isResolved()
+                        const result = await axios.get(`${this.endpoint}/payload/${res.data.uuid}`, headers)
                         if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
                         if (this.account === result.data.response.account) throw new Error(this.$t('wizard.error.equalAccounts'))
                         this.RegularKey = result.data.response.account
@@ -232,8 +225,8 @@ export default {
                         }
                         const res = await axios.post(`${this.endpoint}/payload`, payload, headers)
                         this.openSignRequest(res.data.uuid)
-                        const status = await this.ws(res.data.refs.websocket_status)
-                        const result = await axios.get(`${this.endpoint}/payload/${status.payload_uuidv4}`, headers)
+                        await this.isResolved()
+                        const result = await axios.get(`${this.endpoint}/payload/${res.data.uuid}`, headers)
                         if (result.data.response.dispatched_result !== 'tesSUCCESS') throw new Error(this.$t(`wizard.error.${result.data.response.dispatched_result}`))
                         this.msg = this.$t('wizard.success')
                         this.finished = true
