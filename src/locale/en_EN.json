@@ -26,6 +26,10 @@
             "button": "Next step (finish)"
         },
         "success": "Card configured as back up card",
+        "info": {
+            "title": "Info",
+            "text": "To sign with your Regular Key (backup) card, please downgrade your primary card to 'read only' (Settings - Accounts - primary card), so XUMM won't try to sign with your primary card anymore, resulting in using your back up card. You can restore this by simply importing your primary card again."
+        },
         "error": {
             "title": "Oops",
             "reactNative": "This WebPage is not supported",

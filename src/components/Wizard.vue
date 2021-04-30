@@ -230,6 +230,11 @@ export default {
                         if (result.data.response.dispatched_result !== 'tesSUCCESS') throw new Error(this.$t(`wizard.error.${result.data.response.dispatched_result}`))
                         this.msg = this.$t('wizard.success')
                         this.finished = true
+                        this.$swal({
+                            icon: 'info',
+                            title: this.$t('wizard.info.title'),
+                            text: this.$t('wizard.info.text')
+                        })
                     } catch (e) {
                         this.throwError(e)
                     }
