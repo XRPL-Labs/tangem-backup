@@ -12,6 +12,7 @@
             <ol class="mb-0 pb-0 mt-1 ml-0 pl-4">
                 <li>{{ $t("start.list_item_1") }}</li>
                 <li>{{ $t("start.list_item_2") }}</li>
+                <li>{{ $t("start.list_item_3") }}</li>
             </ol>
         </div>
         <div class="mt-4 text-center">
