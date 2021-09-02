@@ -5,6 +5,7 @@
         "list_header": "To continue you need:",
         "list_item_1": "Tangem card to back up",
         "list_item_2": "Tangem card that you will use as your backup card",
+        "list_item_3": "Import both Cards in XUMM before proceeding",
         "button": "I'm ready, continue",
         "try_again": "Try again",
         "error": "Error fetching environment data"
