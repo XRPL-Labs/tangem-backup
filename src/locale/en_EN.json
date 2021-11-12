@@ -14,7 +14,7 @@
         "step_1": {
             "header": "Step 1",
             "body": "This step will let you select your primary (Tangem card) XRPL account. This is the account a back up card will be set on.",
-            "button": "Select pimary card"
+            "button": "Select primary card"
         },
         "step_2": {
             "header": "Step 2",
