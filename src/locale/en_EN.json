@@ -1,35 +1,35 @@
 {
     "start": {
         "subtitle": "Configure a back up Tangem card",
-        "description": "This xApp will help you to setup a backup account also known as a Regular Key account with your XUMM Tangem Card. It sets a RegularKey (on ledger) to your primary account. After completion you can sign transactions for your primary account with both accounts.",
+        "description": "This xApp will help you setup a 'backup account' (also known as a Regular Key account) with your XUMM Tangem Card. It sets a RegularKey (on ledger) to your primary account. After the setup procedure, if you cannot find your secret key anymore in the future, you can sign with your card.",
         "list_header": "To continue you need:",
-        "list_item_1": "Account to back up",
+        "list_item_1": "Account to configure (card or non-card based)",
         "list_item_2": "Tangem card that you will use as your backup card",
-        "list_item_3": "Import both Cards in XUMM before proceeding",
+        "list_item_3": "Import both accounts (to back up and back up card) in XUMM before proceeding",
         "button": "I'm ready, continue",
         "try_again": "Try again",
         "error": "Error fetching environment data"
     },
     "wizard": {
         "step_1": {
-            "header": "Step 1",
-            "body": "This step will let you select your primary XRPL account. This is the account a back up card will be set to.",
-            "button": "Select primary Account"
+            "header": "1. Account to configure",
+            "body": "This step will let you select your primary XRPL account. This is the account a back up card will be configured on.",
+            "button": "Select account"
         },
         "step_2": {
-            "header": "Step 2",
-            "body": "Sign with the the Back Up account (Tangem card) and make sure that card is also added in XUMM",
-            "button": "Confirm back up card"
+            "header": "2. Back up Tangem card",
+            "body": "Sign with the the back up account (Tangem card).",
+            "button": "Select back up card"
         },
         "step_3": {
-            "header": "Step 3",
+            "header": "3. Sign and Submit",
             "body": "Sign & submit the AccountSet transaction",
-            "button": "Next step (finish)"
+            "button": "Finish"
         },
         "success": "Card configured as back up card",
         "info": {
             "title": "Info",
-            "text": "To sign with your Regular Key (backup) card, please downgrade your primary card to 'read only' (Settings - Accounts - primary card), so XUMM won't try to sign with your primary card anymore, resulting in using your back up card. You can restore this by simply importing your primary card again."
+            "text": "To sign with your back up card, import your primary account as Read Only account (r-address only) and make sure your Tangem card is imported."
         },
         "error": {
             "title": "Oops",
