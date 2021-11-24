@@ -44,10 +44,10 @@
             "notTangem": "The account you selected does not belong to a Tangem card, please try again",
             "dissabledMasterkey": "Master Key is disabled on your Tangem card: you cannot use this wizard",
 
-            "hasRegularKeyTitle": "Regular key already set",
-            "changeRegularKey": "Do you want to change the backup account?",
-            "cancelAction": "Oops take me back",
-            "confirmChangeRegularKey": "Continue to replace my backup account",
+            "hasRegularKeyTitle": "Existing Regular Key",
+            "changeRegularKey": "This account already has a Regular Key (back up account) set. If you continue the back up account will be replaced (overwritten)",
+            "cancelAction": "× Cancel",
+            "confirmChangeRegularKey": "✓ Continue: replace backup account",
 
             "invalidParams": "One or more fields are specified incorrectly, or one or more required fields are missing.",
             "lgrNotFound": "The ledger specified by the ledger_hash or ledger_index does not exist, or it does exist but the server does not have it.",
