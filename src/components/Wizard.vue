@@ -162,7 +162,8 @@ export default {
                         await this.isResolved()
                         const result = await axios.get(`${this.endpoint}/payload/${res.data.uuid}`, headers)
 
-                        if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
+                        // Skip this check, you can backup any XRP account now
+                        // if (result.data.payload.signmethod !== 'TANGEM') throw new Error(this.$t('wizard.error.notTangem'))
 
                         this.account = result.data.response.account
 
