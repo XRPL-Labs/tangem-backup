@@ -1,4 +1,4 @@
-# xApp: Tangem Backup
+# xApp: Tangem Backup [![Netlify Status](https://api.netlify.com/api/v1/badges/d3a7b053-f15e-49fe-972b-485c258133f3/deploy-status)](https://app.netlify.com/sites/xapp-tangem-backup/deploys)
 
 This XUMM (xumm.app) xApp allows users to configure a second Tangem card as a
 "backup card (account)" using on (XRP) ledger RegularKey features.
