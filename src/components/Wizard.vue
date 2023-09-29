@@ -87,15 +87,6 @@ export default {
                 document.addEventListener('message', message)
             })
         },
-        getWebSocketUrl(nodetype) {
-            switch (nodetype) {
-                case "MAINNET":
-                    return 'wss://xrplcluster.com'
-                case "TESTNET":
-                    return 'wss://testnet.xrpl-labs.com'
-            }
-            return 'wss://xrplcluster.com'
-        },
         accountInfo(account) {
             const command = {
                 id: 666,
@@ -105,8 +96,7 @@ export default {
                 ledger_index: "current"
             }
             return new Promise((resolve, reject) => {
-                alert(JSON.stringify(this.state))
-                const socket = new WebSocket(this.getWebSocketUrl(this.state.nodetype))
+                const socket = new WebSocket(this.state.nodewss)
                 socket.onopen = event => {
                     socket.send(JSON.stringify(command))
                 }
