@@ -3,8 +3,8 @@
         "subtitle": "Configure a back up Tangem card",
         "description": "This xApp will allow you to configure a XUMM Tangem card to work as an additional signing method to another XRP Ledger account which will work as a back-up. It will set a Regular Key from an activated XRPL account to a XUMM Tangem card account.",
         "list_header": "To continue you need:",
-        "list_item_1": "An XRPL account that has been activated and has been imported into XUMM",
-        "list_item_2": "A XUMM Tangem card that has been imported into XUMM. (does NOT need to be activated)",
+        "list_item_1": "An XRPL account that has been activated and has been imported into Xaman",
+        "list_item_2": "A XUMM Tangem card that has been imported into Xaman. (does NOT need to be activated)",
         "button": "I'm ready, continue",
         "try_again": "Try again",
         "error": "Error fetching environment data"
@@ -28,7 +28,7 @@
         "success": "Card configured as back up card",
         "info": {
             "title": "Info",
-            "text": "Some users might want to remove the secret keys of the main account from XUMM, you can do that by setting the Main Account to Read only (If the Main account is not a Tangem card), You can always sign with either the Main account or the Back Up (regular key)"
+            "text": "Some users might want to remove the secret keys of the main account from Xaman, you can do that by setting the Main Account to Read only (If the Main account is not a Tangem card), You can always sign with either the Main account or the Back Up (regular key)"
         },
         "error": {
             "title": "Oops",
