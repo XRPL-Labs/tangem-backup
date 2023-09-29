@@ -60,7 +60,7 @@ export default {
                 const res = await axios({
                     method: 'get',
                     url: `${this.endpoint}/xapp/ott/${this.token}`,
-                    headers: { 'x-api-key': this.apikey }
+                    headers: { 'x-api-key': this.apikey, 'Accept': 'application/json' }
                 })
                 this.data = res.data
                 this.ready = true
