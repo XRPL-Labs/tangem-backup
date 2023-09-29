@@ -54,7 +54,7 @@ app.use(VueSweetalert2, options[theme])
 import './assets/css/xapps-routed-dist.css'
 
 app.config.globalProperties.token = token
-app.config.globalProperties.endpoint = process.env?.VUE_APP_API_ENDPOINT || ''
-app.config.globalProperties.apikey = process.env?.VUE_APP_XAPP_KEY || ''
+app.config.globalProperties.endpoint = process.env?.VUE_APP_API_ENDPOINT || 'https://xumm.app/api/v1/platform'
+app.config.globalProperties.apikey = process.env?.VUE_APP_XAPP_KEY
 
 app.mount('#app')
