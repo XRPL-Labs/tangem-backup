@@ -105,6 +105,7 @@ export default {
                 ledger_index: "current"
             }
             return new Promise((resolve, reject) => {
+                alert(JSON.stringify(this.state))
                 const socket = new WebSocket(this.getWebSocketUrl(this.state.nodetype))
                 socket.onopen = event => {
                     socket.send(JSON.stringify(command))
